@@ -5,7 +5,6 @@ const pino = require('pino')
 const fs = require('fs')
 const chalk = require('chalk')
 const FileType = require('file-type')
-const { Boom } = require("@hapi/boom")
 const path = require('path')
 const CFonts = require('cfonts');
 const { exec, spawn, execSync } = require("child_process")
@@ -19,7 +18,7 @@ const { color } = require('./lib/color')
 const store = makeInMemoryStore({ logger: pino().child({ level: 'silent', stream: 'store' }) })
 
 async function startMiku() {
-console.log(color(figlet.textSync('Miku Bot MD', {
+console.log(color(figlet.textSync('chiku Bot MD', {
 		font: 'Pagga',
 		horizontalLayout: 'default',
 		vertivalLayout: 'default',
@@ -27,14 +26,14 @@ console.log(color(figlet.textSync('Miku Bot MD', {
 		whitespaceBreak: true
         }), 'yellow'))
 
-console.log(color('\nHello, I am Fantox, the main developer of this bot.\n\nThanks for using: Miku Bot','aqua'))
-console.log(color('\nYou can follow me on GitHub: FantoX001','aqua'))
+console.log(color('\nHello, I am Ayush, the main developer of this bot.\n\nThanks for using: Miku Bot','aqua'))
+console.log(color('\nYou can follow me on GitHub: Ayush-pandey-u','aqua'))
 
     let { version, isLatest } = await fetchLatestBaileysVersion()
     const Miku = MikuConnect({
         logger: pino({ level: 'silent' }),
         printQRInTerminal: true,
-        browser: ['Miku by: Fantox','Safari','1.0.0'],
+        browser: ['chiku by: ayush','Safari','1.0.0'],
         auth: state,
         version
     })
@@ -150,16 +149,20 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                 let WAuserName = num
                 mikutext = `
-Hello @${WAuserName.split("@")[0]},
-
-I am *Miku Nakano*, Welcome to ${metadata.subject}.
-
-*Group Description:*
+⋆ اهلا بيك يا..
+ @${WAuserName.split("@")[0]},
+ꔹ━━━━━ꔹ
+⋆ نورت جروب..
+${metadata.subject}.
+ꔹ━━━━━ꔹ
+⋆ وهذا هو وصف الجروب..
 ${metadata.desc}
+ꔹ━━━━━ꔹ
+⋆ من فضلك التزم بالقوانين..
 `
 
     let buttonMessage = {
-    image: await getBuffer(ppgroup),
+    image: await getBuffer(ppuser),
     mentions: [num],
     caption: mikutext,
     footer: `${global.BotName}`,
@@ -169,9 +172,15 @@ Miku.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	let WAuserName = num
                     mikutext = `
-Sayonara 👋, @${WAuserName.split("@")[0]},
+⋆ مع السلامه 👋
+, @${WAuserName.split("@")[0]}, 
+ꔹ━━━━━ꔹ
+⋆ حد يبقي في جروب قمر زي جروب
+${metadata.subject}.
+ꔹ━━━━━ꔹ
+⋆ ويغادر يحمار يلا غور فدهيا..🖤😂
 
-I hope you will come back soon, but we are not going to miss you though!
+
 `
 
     let buttonMessage = {
@@ -253,16 +262,13 @@ I hope you will come back soon, but we are not going to miss you though!
     }
 	
     Miku.public = true
-	
-    Miku.ev.on('creds.update', saveState)
 
     Miku.serializeM = (m) => smsg(Miku, m, store)
-	
 
     Miku.ev.on('connection.update', async (update) => {
         const { connection, lastDisconnect } = update	    
         if (connection === 'close') {
-        let reason = new Boom(lastDisconnect?.error)?.output.statusCode
+        let reason = lastDisconnect.error ? lastDisconnect?.error?.output.statusCode : 0;
             if (reason === DisconnectReason.badSession) { console.log(`Bad Session File, Please Delete Session and Scan Again`); process.exit(); }
             else if (reason === DisconnectReason.connectionClosed) { console.log("Connection closed, reconnecting...."); startMiku(); }
             else if (reason === DisconnectReason.connectionLost) { console.log("Connection Lost from Server, reconnecting..."); startMiku(); }
@@ -275,9 +281,9 @@ I hope you will come back soon, but we are not going to miss you though!
         //console.log('Connected...', update)
     })
 
-    	
-	
-	
+    Miku.ev.on('creds.update', saveState)
+
+
    
     /** Send Button 5 Images
      *
