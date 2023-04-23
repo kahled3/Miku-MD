@@ -7,13 +7,13 @@ global.autoReadAll = false
 global.antitags = true
 
 
-global.Owner = ['201275658375']
-global.OwnerNumber = ['201275658375']
-global.ownertag = ['201275658375']
-global.BotName = "❤️ʙᴏт ᴀʙᴅʟʀᴀʜᴍᴀɴ❤️"
-global.packname = "⍣عبدالرحمن يروحي"
+global.Owner = ['14073297033']
+global.OwnerNumber = ['14073297033']
+global.ownertag = ['14073297033']
+global.BotName = "❤️ʙᴏт Madara❤️"
+global.packname = "مادارا"
 global.author = "⍣01275658375⍣"
-global.OwnerName = "ᴀʙᴅʟʀᴀʜᴍᴀɴ❤️"
+global.OwnerName = "Madara❤️"
 global.BotSourceCode = "https://youtube.com/@ABDALLAH_MOHAMED"
 global.SupportGroupLink = "https://youtube.com/@ABDALLAH_MOHAMED"
 global.sessionName = "session"
@@ -59,15 +59,15 @@ global.ntilink = []
 
 global.mess = {
     jobdone: 'تم...',
-    useradmin: '『 الامر دا لادمن بس! 』',
-    botadmin: '『 ارفع البوت ادمن الاول 』',
-    botowner: 'الميزه دي للمطور بس!',
-    grouponly: '『 الميزه دي للجروبات بس! 』',
-    privateonly: '『 الميزه دي في الخاص بس! 』',
-    botonly: '『 الميزه دي للبوت بس! 』',
-    waiting: '『 استني شويه... 』',
-    nolink: '『 فين الرابط? 』',
-    error: '『 ايرور! 』',
+    useradmin: '*「 هـذا الامـر فـقـط لـ المـشـرفـيـن 」◣*',
+    botadmin: '*「 اعـطـنـي إشـراف لـتـفـعـيـل  الامـر 」◣*',
+    botowner: '*「 هـذا الامـر فـقـط لـ الـمـالـك 」◣*',
+    grouponly: '*「 هـذا الامـر فـقـط لـ الـمـالـك 」◣*',
+    privateonly: '*「 هـذا الامـر فـي الـخـاص فـقـط 」◣*',
+    botonly: '*「 هـذا الامـر فـي الـخـاص فـقـط 」◣*',
+    waiting: '*「 انـتـظـر مـن فـضـلـك 」◣*',
+    nolink: '*「 لايوجد رابط」◣*',
+    error: '*「 خطا/ايرور 」◣*',
     banned: '『 انت محظور من استخدام البوت اتواصل مع المطور لالغاء حظرك! 』',
     bangc: '『 تم حظر الجروب دا من استخدام البوت! 』',
     nonsfw: '『 اكتب الاباحي واختار فتح 』'
