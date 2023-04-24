@@ -5758,7 +5758,7 @@ case 'help': case 'القائمه': case 'menu': case 'بوت': case 'الاوا
 
     ]
                 let buttonMessage = {
-                    video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
+                    image:fs.readFileSync('./system/elgazar.jpg'),gifPlayback:true,
                     caption: helpmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
