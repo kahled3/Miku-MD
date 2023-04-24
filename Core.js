@@ -1487,41 +1487,6 @@ if (smallinput=='كلزق') {
       reply (`*ابتسم للحياه يا حياتي♥✨*`);
     }      
 
-    if (smallinput=='استمارة') {
-        reply (`*━━━━▣━━◤🏮◢━━▣━━━━━*
-
-*█║🗒️استمارة دخول🗒️║█*
-
-*█║اللقب👤〔〕*
-
-*━━━━▣━━◤🏮◢━━▣━━━━━*
-
-*█║من اي انمي📓〔〕*
-
-*━━━━▣━━◤🏮◢━━▣━━━━━*
-
-*█║من طرف من❓〔〕*
-
-*━━━━▣━━◤🏮◢━━▣━━━━━*
-
-*█║صوره ل لقبك🌅〔〕*
-
-*━━━━▣━━◤🏮◢━━▣━━━━━*
-
-*↷اذكر ثلاث انميات شفتها↶*
-*〘〙*
-*〘〙*
-*〘〙*
-
-*━━━━▣━━◤🏮◢━━▣━━━━━*
-
-*⇘‼️ملاحضه‼️⇙*
-*سيتم طردك بعد 24ساعه*
-
-*━━━━▣━━◤🏮◢━━▣━━━━━*
-🏮 O-T-A-K-U |🎗️| G-O-L-D 🏮`)
-    }
-    
 switch(command) {
 	
     case 'sc': case 'التبرع': case 'سكريبت': {
@@ -3669,8 +3634,8 @@ if (isBanChat) return reply(mess.bangc)
          reply(mess.waiting)
          let anu = await fetchJson('https://raw.githubusercontent.com/iamriz7/kopel_/main/kopel.json')
          let random = anu[Math.floor(Math.random() * anu.length)]
-         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `「 ولد 」「👦🏻」◣` }, { quoted: m })
-         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `「 بنت 」「👧🏻」◣` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.male }, caption: `ولد🙎🏻‍♂️` }, { quoted: m })
+         Miku.sendMessage(m.chat, { image: { url: random.female }, caption: `بنت️🙎🏻‍♀️` }, { quoted: m })
      }
  break
 
@@ -5755,101 +5720,45 @@ replay('تم ارسال البث بنجاح !')
 break    
 
 
-case 'help': case 'h': case 'menu': case 'allmenu': case 'listmenu':{
+case 'help': case 'القائمه': case 'menu': case 'بوت': case 'الاوامر':case 'اوامر':{
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
       
- const helpmenu = `Konichiwa *${pushname}* Senpai,
-
-I am *Miku Nakano*, a bot developed by *Fantox*.
-
-🔰 My prefix is:  ${prefix}
-
-Here's the list of my Commands.
-
-
- 
- *━━━〈  🎆 Core 🎆  〉━━━*
-
-speak, miku, stalk, profile, help, delete, deleteall, listgc, listpc, welcome, support, repo, script, admin 
- 
- *━━━〈  🎀 Owner 🎀  〉━━━*
-
-self, public, ban, bangroup, bye, join, bye, block, unblock, broadcast 
-
- *━━━〈  ⭕ Group ⭕  〉━━━*
- 
-promote, demote, revoke, add, remove, tagall, hidetag, groupsetting, grouplink, setgcpp, setname, setdesc, group, nsfw 
-
- *━━━〈  ➰ Anti Link ➰  〉━━━*
- 
-antilinkgc, antilinktg, antilinktt, antilinkytch, antilinkytvid, antilinkig, antilinkfb, antilinktwit, antilinkall, antiwame
-
- *━━━〈  🔍 Search 🔍  〉━━━*
-
-play, ytmp3, ytmp4, yts, lyrics, google, gimage, pinterest, image, weather, movie, wallpaper, searchgc, happymod, wikimedia, ringtone, anime, animestory, manga, ringtone  
-
- *━━━〈  🔰 Convert 🔰  〉━━━*
-
-sticker, toimg, tovideo, togif , steal, stickermeme, emojimix, tourl, tomp3, toaudio
-
- *━━━〈  🔉 Audio 🔉  〉━━━*
-
-bass, tempo, blown, deep, earrape, fast, fat, nightcore, reverse, robot, slow, squirrel
-
- *━━━〈  📍 Reactions 📍  〉━━━*
-
-bonk, cry, bully, cuddle, hug, kiss, lick, pat, smug, yeet, blush, smile, wave, highfive, handhold, nom, glomp, bite, slap, kill, happy, wink, poke, dance, cringe
-
- *━━━〈  🌌 Downloader 🌌  〉━━━*
-
-play, ytmp3, ytmp4, ytvideo, mediafire, instagram, igtv, facebook, fbmp3, twitter, twittermp3, tiktok, tiktokaudio, tiktoknowm, mediafire  
-
- *━━━〈  🈴 Weeb 🈴  〉━━━*
-
-crosplay, waifu, loli, neko, ppcouple, feed, foxgirl, feed, meow, tickle, wallpaper, coffee, animenom, waifu3, neko2, feed, meow, tickle, migumin, awoo, animewallpaper2, anime, manga
-
- *━━━〈  ♨️ Informative ♨️  〉━━━*
-
-animequote, quote, covid, earthquake, wiki
-
- *━━━〈  🎗 Others 🎗  〉━━━*
-
-stickermeme, quotes, darkjoke 
-
- *━━━〈  🎐 Fun 🎐  〉━━━*
-
-reaction, truth, dare, couple, soulmate, handsomecheck, beautifulcheck, awesomecheck, greatcheck, gaycheck, cutecheck, lesbiancheck, hornycheck, prettycheck, lovelycheck, uglycheck, charactercheck
-
- *━━━〈  🪁 Essentials 🪁  〉━━━*
-
-qr, say, translate, fliptext, toletter, weather
-
- *━━━〈  💥 NSFW 💥  〉━━━*
-
-🍁 Type " *${prefix}nsfw* " then enable NSFW (Admin only!) 
-
-🍁 Then type " *${prefix}nsfwmenu* " to get full list of NSFW commands.
+ const helpmenu = `
+•╗ مرحبا ياعزيزي ⤌⤈       
+𓆩 *${pushname}* 𓆪
+•╣ انا بوت واتس اسمي
+𓆩 *${global.BotName}* 𓆪
+•╣ اعمل في الخاص وجروبات
+•╣ وظيفتي حماية جروبك
+•╣ اكتب كلمه .الاوامر لمعرفه
+•╣ اوامر البوت وطريقه الاستخدام
+•╣ مميزات البوت كثيره جدا 
+•╝ ويعمل بجودة فائقه وعاليه
+𓍹————————————𓍻
+𓆩قائمة اوامر سورس عبدالرحمن𓆪 
+𓍹————————————𓍻
+( .م1 ) ☞ اوامر الاعضاء
+( .م2 ) ☞ اوامر المالك
+( .م3 ) ☞  اوامر الجروبات
+( .م4 ) ☞ حماية البحث وتنزيل
+( .م5 ) ☞ اوامر التحويل
+( .م6 ) ☞ اوامر تغيير الصوت
+( .م7 ) ☞ اوامر التسليه
+( .م8 ) ☞ لعرض جميع الاومر
+.المميزات ☞ لعرض مميزات البوت
+.المطور ☞ لعرض مطور البوت
+.السورس ☞ لعرض المبرمج
+`
 
 
+    let buttonshelpm = [
 
+    {buttonId: `.owner`, buttonText: {displayText: '⋆ مبرمج البوت •'}, type: 1}
 
- 『  *${global.BotName}*  』
- Powered by: *Fantox*
-
- 🔰 To use any of these commands type 
- " *${prefix}<Command name>* ".
- 
- 🔰 To get Support Group link type " *${prefix}support* ".
-
- 🔰 Type " *${prefix}help* " to get full command list.`
-    
-
- let buttonshelpm = [
-    {buttonId: `${prefix}owner`, buttonText: {displayText: 'Bot Owner'}, type: 1}
     ]
                 let buttonMessage = {
-                    video:fs.readFileSync('./system/miku2.mp4'),gifPlayback:true,
+                  image:fs.readFileSync('./system/elgazar.jpg'),gifPlayback:true,
                     caption: helpmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
@@ -5859,32 +5768,6 @@ qr, say, translate, fliptext, toletter, weather
             Miku.sendMessage(m.chat, buttonMessage,{ quoted:m })
                 }
 break
- 
-
-case '':
-    if(isCmd){
-    if (isBan) return reply(mess.banned)	 			
-    if (isBanChat) return reply(mess.bangc)
-
-      mikupic ='https://wallpapercave.com/wp/wp10524580.jpg'
-    
-        
- const needhelpmenu = `Do you need help ${pushname} Senpai? Type *${prefix}help* to get my full command list.`
-     
-         let butRun = [
-                {buttonId: `${prefix}help`, buttonText: {displayText: 'Help'}, type: 1}
-                ]
-                let buttonMessage = {
-                    video:fs.readFileSync('./system/miku.mp4'),gifPlayback:true,
-                    caption: needhelpmenu,
-                    footer: `${global.BotName}`,
-                    buttons: butRun,
-                    headerType: 4
-                }
-            Miku.sendMessage(m.chat,buttonMessage,{quoted:m})
-                }
-break
-case 'help': case 'القائمه': case 'menu
  
 
 case 'م1':
