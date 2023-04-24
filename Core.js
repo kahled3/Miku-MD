@@ -6773,3 +6773,59 @@ console.log(chalk.redBright(`Update ${__filename}`))
 delete require.cache[file]
 require(file)
 })
+
+if MsgText[1] == 'امثله' then
+
+katu = {
+
+'سبقني','الصقر','الفصيح','عون','الدله','يعرفك','السواهي','بعين','الخيل','عدوك','النخله','علقو','الطير','محبته','حجته','القط','قسمه','الفوت','الزمان','مخابر',
+
+};
+
+name = katu[math.random(#katu)]
+
+redis:set(max..':Set_Amthlh:'..msg.chat_id_,name)
+
+name = string.gsub(name,'وسبقني','ضربني وبكاء .... وشتكى')
+
+name = string.gsub(name,'الصقر','الي ما يعرف .... يشويه')
+
+name = string.gsub(name,'يعرفك','الي ما .... ما يثمنك')
+
+name = string.gsub(name,'عون','جبتك .... صرتلي فرعون')
+
+name = string.gsub(name,'الدله','اقلب .... على فمها تطلع البنت على امها')
+
+name = string.gsub(name,'النخله','الطول طول .... والعقل عقل الصخلة')
+
+name = string.gsub(name,'السواهي','تحت .... دواهي')
+
+name = string.gsub(name,'بعين','القرد .... امه غزال')
+
+name = string.gsub(name,'عدوك','خاف من .... مره ومن صديقك الف مره')
+
+name = string.gsub(name,'قبل','الجار .... الدار')
+
+name = string.gsub(name,'الفصيح','الديك .... من البيضه يصيح')
+
+name = string.gsub(name,'علقو','المنحوس منحوس لو .... على راسه فانوس')
+
+name = string.gsub(name,'محبته','الي تتغير ... تتغير مخدته')
+
+name = string.gsub(name,'حجته','الغايب .... معه')
+
+name = string.gsub(name,'القط','اذا غاب .... اللعب يا فار')
+
+name = string.gsub(name,'قسمه','الجيزة .... ونصيب')
+
+name = string.gsub(name,'الفوت','اذا فات .... ما ينفع الصوت')
+
+name = string.gsub(name,'الزمان','اذا ما طاعك .... طيعه')
+
+name = string.gsub(name,'الطير','اذا كان فيه .... ما رماه الطير')
+
+name = string.gsub(name,'مخابر','الرجال .... مو مناظر')
+
+return 'اكمل المثل التالي {* '..name..' *}'
+
+end
