@@ -149,16 +149,12 @@ Miku.ev.on('group-participants.update', async (anu) => {
                 if (anu.action == 'add') {
                 let WAuserName = num
                 mikutext = `
-⋆ اهلا بيك يا..
- @${WAuserName.split("@")[0]},
-ꔹ━━━━━ꔹ
-⋆ نورت جروب..
-${metadata.subject}.
-ꔹ━━━━━ꔹ
-⋆ وهذا هو وصف الجروب..
-${metadata.desc}
-ꔹ━━━━━ꔹ
-⋆ من فضلك التزم بالقوانين..
+⭐✑ هلا👋 @${num.split("@")[0]},
+⭐✑ نورت جروبنا ${metadata.subject}
+
+⭐✑ الوصف : ${metadata.desc}
+
+⭐✑ اتمنى ان تستمتع معنا 😍✨!!
 `
 
     let buttonMessage = {
@@ -172,13 +168,12 @@ Miku.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	let WAuserName = num
                     mikutext = `
-⋆ مع السلامه 👋
-, @${WAuserName.split("@")[0]}, 
-ꔹ━━━━━ꔹ
-⋆ حد يبقي في جروب قمر زي جروب
-${metadata.subject}.
-ꔹ━━━━━ꔹ
-⋆ ويغادر يحمار يلا غور فدهيا..🖤😂
+⭐✑ هلا👋 @${num.split("@")[0]},
+⭐✑ نورت جروبنا ${metadata.subject}
+
+⭐✑ الوصف : ${metadata.desc}
+
+⭐✑ اتمنى ان تستمتع معنا 😍✨!!
 
 
 `
