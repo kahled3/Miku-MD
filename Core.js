@@ -5754,7 +5754,6 @@ case 'help': case 'القائمه': case 'menu': case 'بوت': case 'الاوا
 
     let buttonshelpm = [
 
-    {buttonId: `.owner`, buttonText: {displayText: '⋆ مبرمج البوت •'}, type: 1}
 
     ]
                 let buttonMessage = {
@@ -6773,5 +6772,3 @@ console.log(chalk.redBright(`Update ${__filename}`))
 delete require.cache[file]
 require(file)
 })
-
-
