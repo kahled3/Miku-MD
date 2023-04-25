@@ -168,14 +168,9 @@ Miku.sendMessage(anu.id, buttonMessage)
                 } else if (anu.action == 'remove') {
                 	let WAuserName = num
                     mikutext = `
-⭐✑ هلا👋 @${num.split("@")[0]},
-⭐✑ نورت جروبنا ${metadata.subject}
+⭐✑ @${num.split("@")[0]} غادر ${metadata.subject}
 
-⭐✑ الوصف : ${metadata.desc}
-
-⭐✑ اتمنى ان تستمتع معنا 😍✨!!
-
-
+⭐✑ تطلع يجي غيرك 😌✨
 `
 
     let buttonMessage = {
