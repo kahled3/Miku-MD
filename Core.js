@@ -5754,11 +5754,11 @@ case 'help': case 'القائمه': case 'menu': case 'بوت': case 'الاوا
 
     let buttonshelpm = [
 
-    {buttonId: `${prefix}owner`,buttonText: {displayText: 'Bot Owner'}, type: 1}
+    {buttonId: `.owner`, buttonText: {displayText: '⋆ مبرمج البوت •'}, type: 1}
 
     ]
                 let buttonMessage = {
-                    image:fs.readFileSync('./system/elgazar.jpg'),gifPlayback:true,
+                  image:fs.readFileSync('./system/elgazar.jpg'),gifPlayback:true,
                     caption: helpmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
