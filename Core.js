@@ -5754,6 +5754,7 @@ case 'help': case 'القائمه': case 'menu': case 'بوت': case 'الاوا
 
     let buttonshelpm = [
 
+    {buttonId: `${prefix}owner`,buttonText: {displayText: 'Bot Owner'}, type: 1}
 
     ]
                 let buttonMessage = {
