@@ -6576,7 +6576,7 @@ break
 
 
 
-case '':
+case 'نينيتيعيتيتيتيتيتتيتيتhhshsjsshsjdjjsjsjsjsjdjsj':
     if(isCmd){
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
