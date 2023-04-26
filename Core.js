@@ -1388,11 +1388,11 @@ if (smallinput.includes('يا بوت') || smallinput.includes(' hui')) {
     }
    
     if (smallinput=='bot') {
-      reply (`مرحبا *${pushname}*, انا *${BotName}*, بوت واتساب مطور من عبدالرحمن*  اكتب  *${prefix}الاوامر* لظهور قائمه الاوامر الخاصه بي.`);
+      reply (`مرحبا *${pushname}*, انا *${BotName}*, بوت واتساب مطور من مادارا *  اكتب  *${prefix}الاوامر* لظهور قائمه الاوامر الخاصه بي.`);
     }
 
     if (smallinput=='بوت') {
-        reply (`*اسمي عبدالرحمن يروحي♥✨*`)
+        reply (`*اسمي مادارا♥✨*`)
     }
     
     if (smallinput=='السلام عليكم') {
@@ -1427,12 +1427,12 @@ if (smallinput.includes('يا بوت') || smallinput.includes(' hui')) {
         reply (`*ايتاشي عمك🤺✨*`)
     }
     
-    if (smallinput=='عبدالرحمن') {
-        reply (`*عبدالرحمن عمك🤺✨*`)
+    if (smallinput=='مادارا') {
+        reply (`*مادارا عمك🤺✨*`)
     }
     
     if (smallinput=='من صنعك') {
-        reply (`*عبدالرحمن مطوري 🥺✨*`)
+        reply (`*مادارا مطوري 🥺✨*`)
     }
     
     if (smallinput=='زورو') {
@@ -1440,7 +1440,7 @@ if (smallinput.includes('يا بوت') || smallinput.includes(' hui')) {
     }
     
     if (smallinput=='لا') {
-        reply (`*ليش لا يكلب👾 *`)
+        reply (`*ليش لا 👾 *`)
     }
     
     if (smallinput=='اسكت') {
@@ -1494,8 +1494,8 @@ switch(command) {
     if (isBanChat) return reply(mess.bangc)
     teks = `مرحبا انا بوت اسمي 
 *${global.BotName}
-لا تنسي الاشتراك بقناه اليوتيوب⭐️
-https://youtube.com/@ABDALLAH_MOHAMED
+لا تنسي تتابعني تيكتوك⭐️
+https://www.tiktok.com/@meleo.1?_t=8bmdQq2FZDd&_r=1
 `
     let buttons = [
     {buttonId: `.menu`, buttonText: {displayText: 'قائمه البوت✨'}, type: 1}
@@ -1621,14 +1621,13 @@ reply(`
 • انا بوت واتس اسمي ⤌⤈
 𓆩 *${global.BotName}* 𓆪
 • تم تطويري وبرمجتي •
-• بواسطه عبدالرحمن •
+• بواسطه مادارا •
 • اذا كنت تريد صنع بوت مماثل لهذا •
 يجب عليك التواصل مع المطور بوت وتس مثل هذا البوت
 
 
 لينك شاتي 
-https://api.whatsapp.com/send?phone=+201275658375
-
+.....
 `)
 break
 case 'getsxvdxcmd': {
@@ -1644,7 +1643,7 @@ break
 case 'support': case 'الدعم':
     
     reply(`رقم المطور لحل مشاكلك
-https://api.whatsapp.com/send?phone=+201275658375`)
+`)
     break
 
 case 'الشرح': case 'الوصف':
@@ -1655,13 +1654,12 @@ case 'الشرح': case 'الوصف':
 • انا بوت واتس اسمي ⤌⤈
 𓆩 *${global.BotName}* 𓆪
 • تم تطويري وبرمجتي •
-• بواسطه عبدالرحمن •
+• بواسطه مادارا •
 • اذا كنت تريد صنع بوت مماثل لهذا •
 يجب عليك التواصل مع المطور لتنصيب بوت وتس مثل هذا البوت
 
 لينك شاتي 
-https://api.whatsapp.com/send?phone=+201275658375
-
+.........
 `)
     break
 
@@ -1910,7 +1908,7 @@ if (isBanChat) return reply(mess.bangc)
 if (!args.join(" ")) return reply('أين هو الإيموجي؟')
 emoji.get(args.join(" ")).then(async(emoji) => {
 let mese = await Miku.sendMessage(m.chat, {image:{url:emoji.images[4].url}, caption: `اي خدمه يروحي..🖤🙂`}, {quoted:m})
-await Miku.sendMessage(from, {text:"اعمل ريب علي الصوره واكتب -استيكر"}, {quoted:mese})
+await Miku.sendMessage(from, {text:"سوي رد على الصوره واكتب .استيكر"}, {quoted:mese})
 })
 }
 break
@@ -2713,7 +2711,7 @@ let mentioned = participants.map(v => v.jid)
     case 'resetlinkgrup':
     case 'رستر':
     case 'resetlink':
-    case 'resetgrouplink':
+    case 'تغيير الرابط':
     case 'رستر-الرابط':
     case 'resetgruplink': {
        if (isBan) return reply(mess.banned)	 			
@@ -2910,7 +2908,7 @@ let mentioned = participants.map(v => v.jid)
             Miku.sendMessage(m.chat, { audio: buff, mimetype: 'audio/mpeg' }, { quoted : m })
             fs.unlinkSync(ran)
             })
-            } else reply(`رد علي الصوت اللي عاوز تغيرو _${prefix + command}_`)
+            } else reply(`رد على الصوت الي بتغيره _${prefix + command}_`)
             } catch (e) {
             reply(e)
             }
@@ -2951,11 +2949,11 @@ case 'public': case 'عام': {
  break
 
 
-case 'لصوره': case 'toimg': {
+case 'لصوره': case 'صورة': {
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
-if (!m.quoted) return reply('رد علي صوره')
-if (!/webp/.test(mime)) return reply(`رد علي صوره واكتب الامر *${prefix + command}*`)
+if (!m.quoted) return reply('رد علي ملصق')
+if (!/webp/.test(mime)) return reply(`رد على ملصق واكتب الامر *${prefix + command}*`)
 reply(mess.waiting)
 let media = await Miku.downloadAndSaveMediaMessage(quoted)
 let ran = await getRandom('.png')
@@ -2969,10 +2967,10 @@ fs.unlinkSync(ran)
 }
 break
 
-case 'لفيديو': case 'tovideo': {
+case 'لفيديو': case 'فيديو': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
- if (!m.quoted) return reply('رد علي صوره')
+ if (!m.quoted) return reply('رد علي ملصق')
  if (!/webp/.test(mime)) return reply(`رد علي استيكر واكتب الامر*${prefix + command}*`)
  reply(mess.waiting)
  let { webp2mp4File } = require('./lib/uploader')
@@ -2983,7 +2981,7 @@ case 'لفيديو': case 'tovideo': {
  }
  break
 
-case 'لصوتي': case 'toaudio': {
+case 'لصوتي': case 'صوت': {
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
  if (!/video/.test(mime) && !/audio/.test(mime)) return reply(`رد علي الفيديو اللي هتحولو لصوت واكتب الامر ${prefix + command}`)
@@ -3060,7 +3058,7 @@ case 'translate': case 'trans': {
     break
 
 
-case 'image': case 'صوره': case 'صورة':{
+case 'img': case 'صوره': case 'صورة':{
    if (isBan) return reply(mess.banned)	 			
 if (isBanChat) return reply(mess.bangc)
 if (!args[0]) return reply("اكتب اسم الصوره اللي تبحث عنها!")
@@ -3289,7 +3287,7 @@ case 'twddlxx': {
  }
  break
 
- case 'fbdl': case 'فيسبوك': case 'facebook': case 'fbmp4': {     	    
+ case 'فيس بوك': case 'فيسبوك': case 'facebook': case 'fbmp4': {     	    
     if (isBan) return reply(mess.banned)	 			
  if (isBanChat) return reply(mess.bangc)
               if (!text) return reply(`Please provide the link!\n\nExample: ${prefix}facebook https://www.facebook.com/groups/599913174599515/permalink/705467384044093/`)
@@ -3794,7 +3792,7 @@ await Miku.sendButtonText(m.chat, buttons, jawab, Miku.user.name, m, {mentions: 
 }
 break
 
-case 'جوزني': case 'زوجني': {
+case 'زواج': case 'زوجني': {
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 if (!m.isGroup) return replay(`${mess.grouponly}`)
@@ -3870,7 +3868,7 @@ break
 case 'الحب':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`اعمل منشن علي شخص مثال : ${prefix + command} @ABDALLAH`)
+				if (!text) return replay(`سوي منشن علي شخص مثال : ${prefix + command} @ABDALLAH`)
 					const gan = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const teng = gan[Math.floor(Math.random() * gan.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالاجابه : *${teng}%*` }, { quoted: m })
@@ -3879,7 +3877,7 @@ Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالاجاب�
 case 'الجمال':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`اعمل منشن علي شخص مثال : ${prefix + command} @ABDALLAH`)
+				if (!text) return replay(`سوي منشن علي شخص مثال : ${prefix + command} @ABDALLAH`)
 					const can = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const tik = can[Math.floor(Math.random() * can.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالجواب : *${tik}%*` }, { quoted: m })
@@ -3896,7 +3894,7 @@ case 'awesomecheck':
                       case 'الكره':
                         if (isBan) return reply(mess.banned)
                         if (isBanChat) return reply(mess.bangc)
-				if (!text) return replay(`اعمل منشن علي شخص مثال : ${prefix + command} @ABDALLAH`)
+				if (!text) return replay(`سوي منشن علي شخص مثال : ${prefix + command} @ABDALLAH`)
 					const sangeh = ['1','2','3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40','41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60','61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80','81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100']
 					const sange = sangeh[Math.floor(Math.random() * sangeh.length)]
 Miku.sendMessage(from, { text: `*${command}*\n\nالاسم : ${q}\nالجواب : *${sange}%*` }, { quoted: m })
@@ -3907,7 +3905,7 @@ case 'شخصيتك':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
 					if (!text) return replay(`اعمل منشن علي شخص, مثال : ${prefix + command} @ABDALLAH`)
-					const Mikutttt =['زفت','واطي','غبي','مطيع','غلبان','جدع','طيب','حبوب','جميل','حمار','محترم','شرموط','كلب','ورع']
+					const Mikutttt =['زفت','ثور','غبي','شهم','غلبان','رجل','طيب','حبوب','جميل','حمار','محترم','كفو','كلب','ورع']
 					const taky = Mikutttt[Math.floor(Math.random() * Mikutttt.length)]
 					Miku.sendMessage(from, { text: `التحقق من الشخصية : ${q}\nالاجابه : *${taky}*` }, { quoted: m })
 				     break
@@ -3978,11 +3976,11 @@ case 'شخصيتك':
 "صراحه  | هل قبلت فتاه؟"
      ]
                    const Mikudareww = dare[Math.floor(Math.random() * dare.length)]
-                   buffer = await getBuffer(`https://telegra.ph/file/639d237da8c9fa379560e.jpg`)                   
+                   buffer = await getBuffer(`https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg`)               
                    Miku.sendMessage(from, { image: buffer, caption: '*♚ مرحبا بك في لعبة صراحه*\nꔹ━━━━━ꔹ\n'+ Mikudareww }, {quoted:m})
                    break
                        
-case 'daed': case 'انصح':
+case 'نصيحة': case 'انصح':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
                    const daed =[
@@ -4048,7 +4046,7 @@ case 'daed': case 'انصح':
 " كنت نصحت نفسي ياخويا😹", 
              ]
                    const Mikudaedww = daed[Math.floor(Math.random() * daed.length)]
-                   buffer = await getBuffer(`https://telegra.ph/file/639d237da8c9fa379560e.jpg`)                   
+                   buffer = await getBuffer(`https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg`)               
                    Miku.sendMessage(from, { image: buffer, caption: '*♚ اتفضل النصيحه اعمل بيها*\nꔹ━━━━━ꔹ\n'+ Mikudaedww }, {quoted:m})
                    break
                          
@@ -4299,7 +4297,7 @@ case 'daqed': case 'اسال':
 "سورتان في القرآن الكريم معروفتين باسم الزهراوان، فما هما؟ ",
              ]
                    const Mikudaqedww = daqed[Math.floor(Math.random() * daqed.length)]
-                   buffer = await getBuffer(`https://telegra.ph/file/639d237da8c9fa379560e.jpg`)                   
+                   buffer = await getBuffer(`https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg`)               
                    Miku.sendMessage(from, { image: buffer, caption: '*♚ اتفضل سوال يلا جاوب*\nꔹ━━━━━ꔹ\n'+ Mikudaqedww }, {quoted:m})
                    break
        
@@ -4360,7 +4358,7 @@ case 'daqed': case 'اسال':
 "دولة واسم بحرف ⤌ ب  ",
              ]
                    const Mikudaqdww = daqd[Math.floor(Math.random() * daqd.length)]
-                   buffer = await getBuffer(`https://telegra.ph/file/639d237da8c9fa379560e.jpg`)                   
+                   buffer = await getBuffer(`https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg`)               
                    Miku.sendMessage(from, { image: buffer, caption: '*♚ مرحبا بك في لعبة الحروف*\nꔹ━━━━━ꔹ\n'+ Mikudaqdww }, {quoted:m})
                    break              
                    
@@ -4372,7 +4370,7 @@ case 'daqed': case 'اسال':
 "『فيجيتا』","『غوكو』","『شيسوي』","『ايتاشي』","『ناروتو』","『كيلوا』","『لوفي زورو سانجي』","『زاراكي ايزن توسين』","『ناروتو ساسكي كاكاشي』","『مادارا اوبيتو』","『هاشيراما توبيراما』","『انزاي دازاي』","『هاغومورو』","『سوكونا يوجي』","『كاكاشي هاتاكي』","『فوغاكو اوتشيها』","『ناروتو اوزوماكي』","『غارب لوفي ايس ساب』و","『اكاينو اوكيجي كيزارو』","『غون كيلوا』","『اوميني』","『سيلفا زينو نيترو』","『استا يامي』","『كيسكي يوروتشي ايتشيغو』","『ساروتوبي دانزو』","『فوجيتورا』","『نامي روبين』","『هيماواري هينات』","『ستارك جريمجو نيل』","『الوكا』","『شينو كيبا』","『روك لي مايت غاي』","『ايتاشي ساسكي』","『كونان ناغاتو ياهيكو』","『جيرايا تسونادي』","『ساي اينو』","『شينرا』","『ثوركيل ثورفين ثورز』","『اشيلاد』","『لاو ميهوك زورو』","『تيتش ادوارد』","『ناكا اوتشيها』","『هيروزين ساروتوبي』","『مونكي دي لوفي』","『كارين』","『موريا』","『اشورا هامورا』","『انيوشا كاجومي』","『ديدارا ساسوري』","『روجر رايلي』","『تانجيرو نيزيكو』","『زينيتسو اينوسكي』","『زيك ايرين』","『ميكاسا اني』","『ليفاي اكيرمان』","『ايروين مايكي』","『مايكي دراكن』","『هيسوكا』","『ارمين』","『هاتسوني ميكو』","『كورو』","『اوراهارا كيسكي』","『شينوبو كاناو』","『كيسامي اكاشي』","『كوزان』",
              ]
                    const Mikuverdad2ww = verdad2[Math.floor(Math.random() * verdad2.length)]
-                   buffer = await getBuffer(`https://telegra.ph/file/639d237da8c9fa379560e.jpg`)                   
+                   buffer = await getBuffer(`https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg`)               
                    Miku.sendMessage(from, { image: buffer, caption: '*♚ مرحبا بك في كت*\nꔹ━━━━━ꔹ\n'+ Mikuverdad2ww }, {quoted:m})
                    break
                    
@@ -4487,7 +4485,7 @@ case 'daqed': case 'اسال':
 "أنِر ظُلمتي، وامحُ خطيئتي، واقبل توبتي وأعتِق رقبتي يا اللّٰه. إنكَ عفوٌّ تُحِبُّ العفوَ؛ فاعفُ عني 💛 ", 
              ]
                    const Mikudaqaww = daqa[Math.floor(Math.random() * daqa.length)]
-                   buffer = await getBuffer(`https://telegra.ph/file/639d237da8c9fa379560e.jpg`)                   
+                   buffer = await getBuffer(`https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg`)               
                    Miku.sendMessage(from, { image: buffer, caption: '*♚ مرحبا بك في البوستات*\nꔹ━━━━━ꔹ\n'+ Mikudaqaww }, {quoted:m})
                    break
                    
@@ -4539,12 +4537,12 @@ case 'dared': case 'اذكار':
 "‏مامن لسان يستغفر إلا فتحت له الدنيا بما فيها أستغفرك ربي وأتوب إليك "
              ]
                    const Mikudaredww = dared[Math.floor(Math.random() * dared.length)]
-                   buffer = await getBuffer(`https://telegra.ph/file/639d237da8c9fa379560e.jpg`)                   
+                   buffer = await getBuffer(`https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg`)               
                    Miku.sendMessage(from, { image: buffer, caption: '*♚ مرحبا بك في قسم الاذكار*\nꔹ━━━━━ꔹ\n'+ Mikudaredww }, {quoted:m})
                    break
                          
 
-             case 'dazx': case 'خيروك':
+             case 'لو خيروك': case 'لو':
     if (isBan) return reply(mess.banned)
     if (isBanChat) return reply(mess.bangc)
                    const dazx =[
@@ -4646,7 +4644,7 @@ case 'dared': case 'اذكار':
 "لو خيروك |  بين مشاركة المنزل مع عائلة من الفئران أو عائلة من الأشخاص المزعجين الفضوليين الذين يتدخلون في كل كبيرة وصغيرة؟ ",
              ]
                    const Mikudazxww = dazx[Math.floor(Math.random() * dazx.length)]
-                   buffer = await getBuffer(`https://telegra.ph/file/639d237da8c9fa379560e.jpg`)                   
+                   buffer = await getBuffer(`https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg`)               
                    Miku.sendMessage(from, { image: buffer, caption: '*♚ مرحبا بك في لعبة لو خيروك*\nꔹ━━━━━ꔹ\n'+ Mikudazxww }, {quoted:m})
                    break              
 
@@ -4706,13 +4704,13 @@ case 'daqz': case 'تويت':
 "اخر اغنية سمعتها ?", 
 "تكلم عن نفسك", 
 "ليه انت مش سالك", 
-"ما هي عيوب سورس عبدالرحمن ؟ ", 
+"ما هي عيوب سورس مادارا ؟ ", 
 "اخر كتاب قرآته", 
 "روايتك المفضله ?", 
 "اخر اكله اكلتها", 
 "اخر كتاب قرآته", 
-"ليه عبدالرحمن جدع؟ ", 
- "ليه عبدالرحمن جدع؟ ", 
+"ليه مادارا جدع؟ ", 
+ "ليه مادارا جدع؟ ", 
 "افضل يوم ف حياتك", 
 "ليه مضيفتش كل جهاتك", 
 "حكمتك ف الحياه", 
@@ -4723,13 +4721,13 @@ case 'daqz': case 'تويت':
 " ما السيء في هذه الحياة ؟ ", 
 "أجمل شيء حصل معك خلال هذا الاسبوع ؟ ", 
 "سؤال ينرفزك ؟ ", 
-" هل يعجبك سورس عبدالرحمن ؟؟ ", 
+" هل يعجبك سورس مادارا ؟؟ ", 
 " اكثر ممثل تحبه ؟ ", 
 "قد تخيلت شي في بالك وصار ؟ ", 
 "شيء عندك اهم من الناس ؟ ", 
 "تفضّل النقاش الطويل او تحب الاختصار ؟ ", 
 "وش أخر شي ضيعته؟ ", 
-"اي رايك في سورس عبدالرحمن ؟ ", 
+"اي رايك في سورس مادارا ؟ ", 
 "كم مره حبيت؟ ", 
 " اكثر المتابعين عندك باي برنامج؟", 
 " نسبه الندم عندك للي وثقت فيهم ؟", 
@@ -4940,7 +4938,7 @@ case 'daqz': case 'تويت':
   "تتوقع إنك بتتزوج اللي تحبه؟ ",
   "ما هو أمنيتك؟ ",
   "وين تشوف نفسك بعد خمس سنوات؟ ",
-  "هل انت حرامي تويت بتعت عبدالرحمن؟ ",
+  "هل انت حرامي تويت بتعت مادارا؟ ",
   "لو خيروك تقدم الزمن ولا ترجعه ورا؟ ",
   "لعبة قضيت وقتك فيه بالحجر المنزلي؟ ",
   "تحب تطق الميانة ولا ثقيل؟ ",
@@ -4948,7 +4946,7 @@ case 'daqz': case 'تويت':
   "اول ماتصحى من النوم مين تكلمه؟ ",
   "عندك الشخص اللي يكتب لك كلام كثير وانت نايم؟ ",
   "قد قابلت شخص تحبه؟ وولد ولا بنت؟ ",
-   "هل انت تحب عبدالرحمن؟ ",
+   "هل انت تحب مادارا؟ ",
 "اذا قفطت احد تحب تفضحه ولا تستره؟ ",
   "كلمة للشخص اللي يسب ويسطر؟ ",
   "آية من القران تؤمن فيه؟ ",
@@ -4960,7 +4958,7 @@ case 'daqz': case 'تويت':
   "اذكر موقف ماتنساه بعمرك؟ ",
   "وش حاب تقول للاشخاص اللي بيدخل حياتك؟ ",
   "ألطف شخص مر عليك بحياتك؟ ",
-   "هل عبدالرحمن لطيف؟ ",
+   "هل مادارا لطيف؟ ",
 "انت من الناس المؤدبة ولا نص نص؟ ",
   "كيف الصيد معاك هالأيام ؟ وسنارة ولاشبك؟ ",
   "لو الشخص اللي تحبه قال بدخل حساباتك بتعطيه ولا تكرشه؟ ",
@@ -4989,7 +4987,7 @@ case 'daqz': case 'تويت':
   "انسان م تحب تتعامل معاه ابداً ؟ ",
   "شيء بسيط تحتفظ فيه؟ ",
   "فُرصه تتمنى لو أُتيحت لك ؟ ",
-   "لي عبدالرحمن ناك اليكس؟ ",
+   "لي مادارا ناك اليكس؟ ",
   "شيء مستحيل ترفضه ؟. ",
   "لو زعلت بقوة وش بيرضيك ؟ ",
   "تنام بـ اي مكان ، ولا بس غرفتك ؟ ",
@@ -5018,7 +5016,7 @@ case 'daqz': case 'تويت':
   "أجمل شي بحياتك وش هو؟ ",
              ]
                    const Mikudaqzww = daqz[Math.floor(Math.random() * daqz.length)]
-                   buffer = await getBuffer(`https://telegra.ph/file/639d237da8c9fa379560e.jpg`)                   
+                   buffer = await getBuffer(`https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg`)               
                    Miku.sendMessage(from, { image: buffer, caption: '*♚ مرحبا بك في قسم تويت*\nꔹ━━━━━ꔹ\n'+ Mikudaqzww }, {quoted:m})
                    break              
 
@@ -5736,7 +5734,7 @@ case 'help': case 'القائمه': case 'menu': case 'بوت': case 'الاوا
 •╣ مميزات البوت كثيره جدا 
 •╝ ويعمل بجودة فائقه وعاليه
 𓍹————————————𓍻
-𓆩قائمة اوامر سورس عبدالرحمن𓆪 
+𓆩قائمة اوامر سورس مادارا𓆪 
 𓍹————————————𓍻
 ( .م1 ) ☞ اوامر الاعضاء
 ( .م2 ) ☞ اوامر المالك
@@ -5754,11 +5752,11 @@ case 'help': case 'القائمه': case 'menu': case 'بوت': case 'الاوا
 
     let buttonshelpm = [
 
-    {buttonId: `${prefix}owner`,buttonText: {displayText: 'Bot Owner'}, type: 1}
+    {buttonId: `.owner`, buttonText: {displayText: '⋆ مبرمج البوت •'}, type: 1}
 
     ]
                 let buttonMessage = {
-                    image:fs.readFileSync('./system/elgazar.jpg'),gifPlayback:true,
+                  image:fs.readFileSync('./system/elgazar.jpg'),gifPlayback:true,
                     caption: helpmenu,
                     footer: `${BotName}`,
                     buttons: buttonshelpm,
@@ -5776,7 +5774,7 @@ case 'اوامر الاعضاء':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -5822,7 +5820,7 @@ case 'المميزات':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -5880,7 +5878,7 @@ case 'اوامر المالك':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -5937,7 +5935,7 @@ case 'اوامر الجروب':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -6027,7 +6025,7 @@ case 'اوامر التنزيل':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -6095,7 +6093,7 @@ case 'اوامر التحويل':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -6149,7 +6147,7 @@ case 'اوامر تغيير الصوت':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -6203,7 +6201,7 @@ case 'اوامر التسليه':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -6290,7 +6288,7 @@ case 'جميع الاوامر':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -6583,7 +6581,7 @@ case '':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
-      mikupic ='https://telegra.ph/file/639d237da8c9fa379560e.jpg'
+      mikupic ='https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg'
     
         
  const needhelpmenu = `
@@ -6599,15 +6597,15 @@ case '':
 •╝ ويعمل بجودة فائقه وعاليه
 
 ⋆ يمكنك التواصل مع المبرمج عبر التيلجرام ⤌⤈
- t.me/D_F_M_1
+ ..........
 
 • تم تطويري وبرمجتي •
-• بواسطه عبدالرحمن •
+• بواسطه 『مادارا •
 • اذا كنت تريد صنع بوت مماثل لهذا •
 يجب عليك التواصل مع المطور لتنصيب البوت
 
 لينك شاتي 
-https://api.whatsapp.com/send?phone=+201275658375
+..........
 
 
 `
@@ -6626,20 +6624,20 @@ https://api.whatsapp.com/send?phone=+201275658375
                 }
 break
 
-case 'عبدالله': case 'عبدالرحمن': case 'السورس':
+case 'عبدالل..ه': case 'مادارا...': case 'السورس':
     if (isBan) return reply(mess.banned)	 			
     if (isBanChat) return reply(mess.bangc)
 
 const txt = `
 ⋆ تم تطوير وبرمجه هذا السورس •
-⋆ بواسطه عبدالرحمن •
+⋆ بواسطه مادارا •
 ⋆ يمكنك التواصل مع المبرمج عبر التيلجرام ⤌⤈
- t.me/D_F_M_1
+ ....
 رقمي الواتساب الواتساب ⤌⤈
-https://api.whatsapp.com/send?phone=+201275658375
+.....
 واشترك وفعل الجرس وانتظر شروحات للبرمجه..🌍🔥`
 const mikuarray= [
-            "https://telegra.ph/file/639d237da8c9fa379560e.jpg"
+            "https://pbs.twimg.com/media/C6anTXCXEAEl3_D.jpg"
             
             ]
         
@@ -6705,7 +6703,7 @@ default:
         if (isBan) return reply(mess.banned)	 			
         if (isBanChat) return reply(mess.bangc)
         reply (`
-⋆ المعذره ياروحي ⤌⤈
+⋆ المعذره  ⤌⤈
 𓆩 *${pushname}* 𓆪
 لا يوجد امر مثل هذا  اكتب *${prefix}الاوامر* للحصول على قائمة الأوامر الكاملة الخاصة ب البوت 
 `)
